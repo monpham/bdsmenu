@@ -5,7 +5,7 @@
 	"workspaces": ["apps/*"],
 	"scripts": {
 		"dev": "concurrently --kill-others --raw \"npm run dev --prefix apps/web\"",
-		"build": "concurrently --raw \"npm run build --prefix apps/web\"",
+		"build": "npm run build --workspace=web",
 		"start": "concurrently --kill-others --raw",
 		"lint": "concurrently --raw \"npm run lint --prefix apps/web\""
 	},
